@@ -1,0 +1,16 @@
+logging.level.org.springframework: DEBUG
+logging.level.: DEBUG
+spring:
+  datasource:
+    url:  jdbc:mysql://localhost/kintai
+    username: kintai
+    password: kintai333
+    driverClassName: com.mysql.jdbc.Driver
+# JPA
+jpa:
+  hibernate:
+  ddl-auto: update
+  show-sql: true
+# Thymeleaf
+thymeleaf:
+  cache: false
