@@ -4,6 +4,7 @@ package kintai.service
  * Created by admin on 2017/05/26.
  */
 
+import kintai.model.LoginUser
 import kintai.model.User
 import org.springframework.beans.factory.annotation.Autowired
 
