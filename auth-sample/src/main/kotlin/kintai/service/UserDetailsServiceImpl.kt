@@ -4,7 +4,6 @@ package kintai.service
  * Created by admin on 2017/05/26.
  */
 
-import kintai.model.LoginUser
 import kintai.model.User
 import org.springframework.beans.factory.annotation.Autowired
 
@@ -23,7 +22,7 @@ open class UserDetailsServiceImpl :UserDetailsService {
     @Autowired
     lateinit var userService: UserService
 
-    override fun loadUserByUsername(username : String ) : UserDetails{
+    override fun loadUserByUsername(username : String ) : UserDetails? {
     // 認証を行うユーザー情報を格納する
         var user : User?  = null
         try {
@@ -40,7 +39,7 @@ open class UserDetailsServiceImpl :UserDetailsService {
         }
 
         // ユーザー情報が取得できたらSpring Securityで認証できる形で戻す
-        return LoginUser(user);
+        return user
     }
 
 }
